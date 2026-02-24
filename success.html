@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Success</title><link rel="stylesheet" href="./styles.css"/></head>
+<body>
+<header class="top"><h1>Payment Success</h1><nav><a href="/index.html">Store</a></nav></header>
+<main class="card">
+  <div id="status">Loading…</div>
+  <div id="links"></div>
+</main>
+<script type="module">
+const u = new URL(location.href);
+const sid = u.searchParams.get("session_id");
+const status = document.getElementById("status");
+const links = document.getElementById("links");
+if (!sid){ status.textContent="Missing session_id"; }
+else{
+  const s = await fetch(`/api/session/${encodeURIComponent(sid)}`).catch(()=>null);
+  // session endpoint is in /api/stripe? we expose /api/session via web page in this framework? We'll call delivery links only.
+  const d = await fetch(`/api/delivery/links/${encodeURIComponent(sid)}`).then(r=>r.json());
+  if (d.error){ status.textContent=d.error; }
+  else{
+    status.textContent = "✅ Paid — Downloads:";
+    links.innerHTML = "<ul>"+d.items.map(x=>`<li><a href="${x.link}">${x.title}</a></li>`).join("")+"</ul>";
+  }
+}
+</script>
+</body>
+</html>

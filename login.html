@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Login</title><link rel="stylesheet" href="./styles.css"/></head>
+<body>
+<header class="top"><h1>Login</h1><nav><a href="/index.html">Store</a></nav></header>
+<main class="card">
+  <input id="email" placeholder="email" /><br/>
+  <input id="pass" placeholder="password" type="password"/><br/>
+  <button id="login">Login</button>
+  <button id="register">Register</button>
+  <pre id="out" class="small"></pre>
+</main>
+<script type="module">
+const out = document.getElementById("out");
+async function post(url, body){
+  const r = await fetch(url, { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(body) });
+  return r.json();
+}
+document.getElementById("login").onclick = async ()=>{
+  out.textContent = JSON.stringify(await post("/api/auth/login", { email:email.value, password:pass.value }), null, 2);
+};
+document.getElementById("register").onclick = async ()=>{
+  out.textContent = JSON.stringify(await post("/api/auth/register", { email:email.value, password:pass.value }), null, 2);
+};
+</script>
+</body></html>

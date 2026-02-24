@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Account</title><link rel="stylesheet" href="./styles.css"/></head>
+<body>
+<header class="top"><h1>Account</h1><nav><a href="/index.html">Store</a> <a href="/login.html">Login</a></nav></header>
+<main class="grid">
+  <section class="card">
+    <h2>Session</h2>
+    <pre id="me" class="small">Loading…</pre>
+    <button id="logout">Logout</button>
+  </section>
+  <section class="card">
+    <h2>My Licenses</h2>
+    <pre id="lic" class="small">Loading…</pre>
+  </section>
+  <section class="card">
+    <h2>Affiliate</h2>
+    <button id="affReg">Register affiliate</button>
+    <pre id="aff" class="small"></pre>
+  </section>
+</main>
+<script type="module">
+const me = await fetch("/api/auth/me").then(r=>r.json());
+document.getElementById("me").textContent = JSON.stringify(me, null, 2);
+
+document.getElementById("logout").onclick = async ()=>{
+  await fetch("/api/auth/logout", { method:"POST" });
+  location.href="/login.html";
+};
+
+const lic = await fetch("/api/licenses/my").then(r=>r.json());
+document.getElementById("lic").textContent = JSON.stringify(lic, null, 2);
+
+document.getElementById("affReg").onclick = async ()=>{
+  const a = await fetch("/api/affiliates/register", { method:"POST" }).then(r=>r.json());
+  document.getElementById("aff").textContent = JSON.stringify(a, null, 2);
+};
+</script>
+</body></html>

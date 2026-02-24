@@ -1,0 +1,142 @@
+{
+  "bundle": "Enterprise_Storefront_Platform_v2_Code_Framework",
+  "version": "2.0.0",
+  "created_at": "2026-02-16T01:26:31Z",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "da7f6a2684f0a45e4f217ba9ce987cfd1ae26ba926788be0e5a569fbc798b52a",
+      "bytes": 553
+    },
+    {
+      "path": "README.md",
+      "sha256": "14a8c2af2eb6968efa586dd213e033dddb762d615b65b0f57b8a6bd5ccbbe5b2",
+      "bytes": 1379
+    },
+    {
+      "path": "deliverables/license-engine-blueprint.zip",
+      "sha256": "8e1330efd8313878f20a75970b0e26599b40e331039023209eeacfb3f7aa8891",
+      "bytes": 19
+    },
+    {
+      "path": "deliverables/valuation-doctrine.pdf",
+      "sha256": "1fed1d6cbdce02375baa5bef2c370b7b193788655e780272f8121ca706776cc7",
+      "bytes": 28
+    },
+    {
+      "path": "package.json",
+      "sha256": "a393021abef95682289f967a662efd89f1fd1620511d1760a2bacd48ea40a802",
+      "bytes": 507
+    },
+    {
+      "path": "server/index.js",
+      "sha256": "b417353fe10cf5c158fd8f9813e45835754f480d81b46d068a7a315e03170aea",
+      "bytes": 2104
+    },
+    {
+      "path": "server/lib/crypto.js",
+      "sha256": "2b58cc6b4d47181f525f80c42e1c327c19c2cc434669584c991b48ae924b6c1f",
+      "bytes": 1553
+    },
+    {
+      "path": "server/lib/db.js",
+      "sha256": "d8adb98996539295610fb12bf308f22981c7d5a6660cc30381947f9951183191",
+      "bytes": 4003
+    },
+    {
+      "path": "server/modules/admin/routes.js",
+      "sha256": "2f1f742737544783d7c4d0a8f36f39af81a4bcb685241703fb9e448bd4879672",
+      "bytes": 1737
+    },
+    {
+      "path": "server/modules/affiliates/routes.js",
+      "sha256": "f99f9556feb7ba7de8df758d2605cbfbc1560d4216acf41f158bea11ddaedba9",
+      "bytes": 1113
+    },
+    {
+      "path": "server/modules/analytics/routes.js",
+      "sha256": "7a99789b6dbf3154abe58e88fa51d1da2bf51b00956a4db3f8940bb4597c4e0f",
+      "bytes": 714
+    },
+    {
+      "path": "server/modules/auth/routes.js",
+      "sha256": "91bc7117fc51536ecc713bb79ebd7e7531174920bac679e5cabe690fdb684e75",
+      "bytes": 2871
+    },
+    {
+      "path": "server/modules/checkout/routes.js",
+      "sha256": "29cfa8ed5b443c6876d5176cbf270c4b2d9a1562430e165804db9ffb1e560ca9",
+      "bytes": 1907
+    },
+    {
+      "path": "server/modules/delivery/email.js",
+      "sha256": "f5c4f5d5acf1b03320de819e7381794703470a6de9b9b857d3f7b6c798af02da",
+      "bytes": 1688
+    },
+    {
+      "path": "server/modules/delivery/routes.js",
+      "sha256": "3a59113ed5094129ca53385711cb2f766f0d5e99bab98b5b5c929332e2a29237",
+      "bytes": 2697
+    },
+    {
+      "path": "server/modules/licenses/routes.js",
+      "sha256": "a955a1a35de9da9780425ae556b35c7e3ade62b76304972420c7ff56095fcefe",
+      "bytes": 1129
+    },
+    {
+      "path": "server/modules/licenses/service.js",
+      "sha256": "3a4adda6aa5bf4e14a35567e5bfd9755b84c9b55523fcb157b3bfb774a1bf5c1",
+      "bytes": 1771
+    },
+    {
+      "path": "server/modules/products/routes.js",
+      "sha256": "57172fae2d8d0ff060e2bf9669b4b073750fe2800cfa9b1124670396af72de8e",
+      "bytes": 365
+    },
+    {
+      "path": "server/modules/stripe_webhook/routes.js",
+      "sha256": "bf14887e01ac8546948ff33d5dca124a0ae2f7b61f958df5f17ee278c1a14f3b",
+      "bytes": 2614
+    },
+    {
+      "path": "server/modules/stripe_webhook/session_routes.js",
+      "sha256": "ef213deacac6562b7a5485c1fa8205d5eaa89a23cb899bf3186f17f8d23a354a",
+      "bytes": 860
+    },
+    {
+      "path": "web/account.html",
+      "sha256": "e97aed9eb465a197a4922788f7b6a842e3c1a7f4ead9316dfd51057f4afea13e",
+      "bytes": 1448
+    },
+    {
+      "path": "web/admin.html",
+      "sha256": "0a1df42d3c539a3b8885055209ce25f09c52355afd05f9d3d175b2f287766d2d",
+      "bytes": 1029
+    },
+    {
+      "path": "web/cancel.html",
+      "sha256": "450abffcd48cc68024e4af0382c109574350b8e4f29162cc69d836a2c258927c",
+      "bytes": 362
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "832d4e31a24eb53390c4aac954746d6fb45e2e3c24f7b97c5438be570f343607",
+      "bytes": 2366
+    },
+    {
+      "path": "web/login.html",
+      "sha256": "0856d73bd88d3cea3453d4429f04abfc1a5ad75496bd18820105851e6cec6a6a",
+      "bytes": 1172
+    },
+    {
+      "path": "web/styles.css",
+      "sha256": "b90b8666ba49bacd6db020ca27b9c42a577e83127f1ad416073a068c27b7960c",
+      "bytes": 921
+    },
+    {
+      "path": "web/success.html",
+      "sha256": "4a324545131e2aa070ec8b1e8ce58f0a6c3d0aa3bbbc1e25dbf11688bbe8bfc8",
+      "bytes": 1200
+    }
+  ]
+}
